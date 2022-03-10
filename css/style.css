@@ -4,21 +4,152 @@
     box-sizing: border-box;
 }
 
+/* Header stuff */
 
 header {
     background: red;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 10vh;
 }
 
 nav {
+    display: flex;
     background: burlywood;
-    width: 150px;
+    height: 10vh;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+#nav_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90vh;
+    position: absolute;
+    top: -90vh;
+    right: 0px;
+    width: 200px;
+    align-items: center;
+    background: pink;
+    transition: all 0.5s;
+}
+
+.nav_active {
+    transform: translateY(90vh);
+}
+
+#nav_links li {
+    list-style: none;
+}
+
+#nav_links a {
+    text-decoration: none;
+    letter-spacing: 0.1875rem;
+    color: black;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    width: 200px;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav_links a:hover {
+    background: paleturquoise;
+}
+
+#burger {
+    margin-right: 87.5px;
+    /* cursor: pointer; */
+    /* does this do anything??? */
+}
+
+.hamburger_line {
+    width: 25px;
+    height: 3px;
+    background: black;
+    margin: 5px;
+    border-radius: 10%;
+    transition: all 0.5s;
+}
+
+.crossed_line #line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.crossed_line #line2 {
+    opacity: 0;
+}
+
+.crossed_line #line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Index stuff */
+
+#grid_wrapper_index {
+    display: grid;
+    grid-template-areas: 
+    "he"
+    "s1"
+    "s2"
+    "s3"
+    "s4"
+    "s5"
+    "fo"
+    ;
+    grid-template-columns: minmax(100px, 1fr);
+    grid-template-rows: minmax(50px, 10vh) minmax(200px, 1fr) minmax(200px, 1fr) minmax(300px, 1fr) minmax(200px, 1fr) minmax(100px, 1fr) minmax(100px, 15vh);
+    background: turquoise;
+}
+
+@media screen and (min-width: 800px) {
+
+
 
 }
 
-#grid_wrapper_index {
-    background: turquoise;
-    
+
+/* Games stuff */
+
+
+
+/* About&Contact stuff */
+
+
+
+/* Schedule stuff */
+
+
+
+/* Footer stuff */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: orange;
+}
+
+#socials_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#business_hours_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#address_footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
