@@ -4,14 +4,30 @@
     box-sizing: border-box;
 }
 
+h1 {
+    font-size: 3.4375rem;
+}
+
+h2 {
+    font-size: 2.125rem;
+}
+
+h3 {
+    font-size: 1.3125rem;
+}
+
+p {
+   font-size: 0.8125rem; 
+}
+
 /* Header stuff */
 
 header {
+    grid-area: he;
     background: red;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 10vh;
 }
 
 nav {
@@ -103,8 +119,86 @@ nav {
     "fo"
     ;
     grid-template-columns: minmax(100px, 1fr);
-    grid-template-rows: minmax(50px, 10vh) minmax(200px, 1fr) minmax(200px, 1fr) minmax(300px, 1fr) minmax(200px, 1fr) minmax(100px, 1fr) minmax(100px, 15vh);
+    grid-template-rows: minmax(50px, 10vh) minmax(200px, 1fr) minmax(200px, 0.5fr) minmax(300px, 1fr) minmax(200px, 1fr) minmax(100px, 0.5fr) minmax(100px, 25vh);
     background: turquoise;
+}
+
+#grid_wrapper_index h2 {
+    text-decoration: underline;
+}
+
+#membership {
+    grid-area: s1;
+    background: greenyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#membership_button {
+    text-decoration: none;
+    background: grey;
+    border: 5px solid indigo;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20%;
+    text-decoration: none;
+}
+
+#description {
+    grid-area: s2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#games {
+    grid-area: s3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#news {
+    grid-area: s4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#news_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.news_article {
+    background: rgba(121, 121, 121, 0.8);
+    border: 2px solid rgb(0, 0, 0, 0.8);
+    border-radius: 10%;
+    padding: 5px;
+    margin: 5px;
+}
+
+#schedule {
+    grid-area: s5;
+    display: grid;
+    grid-template-areas: 
+    "bh ev"
+    ;
+    grid-template-columns: 1fr, 1fr;
+}
+
+#business_hours_index {
+    grid-area: bh;
+}
+
+#events_index {
+    grid-area: ev;
 }
 
 @media screen and (min-width: 800px) {
@@ -116,7 +210,45 @@ nav {
 
 /* Games stuff */
 
+#games_wrapper {
+    display: grid;
+    grid-template-areas: 
+    "he"
+    "s1"
+    "s2"
+    "fo"
+    ;
+    grid-template-columns: minmax(100px, 1fr);
+    grid-template-rows: minmax(50px, 10vh) minmax(50px, 0.15fr) minmax(200px, 1fr) minmax(100px, 25vh);
+}
 
+#games_title {
+    grid-area: s1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: powderblue;
+    text-decoration: underline;
+}
+
+#games_list {
+    grid-area: s2;
+    background: lightcoral;
+} 
+
+#games_list h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.games_list_article {
+    background: rgb(144, 238, 144, 0.5);
+    margin: 5px;
+    padding: 5px;
+    
+}
 
 /* About&Contact stuff */
 
@@ -128,16 +260,27 @@ nav {
 
 /* Footer stuff */
 footer {
+    grid-area: fo;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background: orange;
+    border-top: solid 4px red;
 }
 
 #socials_footer {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
+    width: 100px;
+    /* minmax width later */
+}
+
+#socials_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #business_hours_footer {
@@ -145,6 +288,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    width: 100px;
 }
 
 #address_footer {
@@ -152,4 +296,5 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    width: 100px;
 }
