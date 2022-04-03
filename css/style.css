@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Fira+Sans&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -6,36 +8,44 @@
 
 h1 {
     font-size: 3.4375rem;
+    font-family: 'Cinzel', serif;
 }
 
 h2 {
     font-size: 2.125rem;
+    font-family: 'Cinzel', serif;
 }
 
 h3 {
     font-size: 1.3125rem;
+    font-family: 'Cinzel', serif;
 }
 
 p {
    font-size: 0.8125rem; 
+   font-family: 'Fira Sans', sans-serif;
 }
 
 /* Header stuff */
 
 header {
     grid-area: he;
-    background: red;
+    background: black;
+    color: rgb(165, 226, 74);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+header img {
+    width: 60px;
+    border-radius: 50px;
+}
+
 nav {
     display: flex;
-    background: burlywood;
     justify-content: flex-end;
     align-items: center;
-    font-family: sans-serif;
 }
 
 #nav_links {
@@ -46,9 +56,9 @@ nav {
     position: absolute;
     top: -90vh;
     right: 0px;
-    width: 200px;
+    width: 100%;
     align-items: center;
-    background: pink;
+    background: rgb(165, 226, 74);
     transition: all 0.5s;
 }
 
@@ -64,36 +74,34 @@ nav {
     text-decoration: none;
     letter-spacing: 0.1875rem;
     color: black;
-    font-size: 1.25rem;
+    font-size: 2.125rem;
     text-transform: uppercase;
-    width: 200px;
+    width: 100%;
     height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 #nav_links a:hover {
-    background: paleturquoise;
-}
-
-#burger {
-    margin-right: 87.5px;
-    /* cursor: pointer; */
-    /* does this do anything??? */
+    font-weight: bold;
+    background: none;
 }
 
 .hamburger_line {
-    width: 25px;
-    height: 3px;
-    background: black;
-    margin: 5px;
+    width: 30px;
+    height: 4px;
+    background: rgb(165, 226, 74);
+    margin: 7px;
     border-radius: 10%;
     transition: all 0.5s;
+    cursor: pointer;
 }
 
 .crossed_line #line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 10px);
+    background: black;
 }
 
 .crossed_line #line2 {
@@ -101,7 +109,8 @@ nav {
 }
 
 .crossed_line #line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-5px, -10px);
+    background: black;
 }
 
 /* Index stuff */
@@ -117,32 +126,32 @@ nav {
     "s5"
     "fo"
     ;
-    grid-template-columns: minmax(300px, 375px);
-    grid-template-rows: minmax(60px, 12vh) minmax(300px, 1fr) minmax(200px, 0.6fr) minmax(300px, 1fr) minmax(500px, 1.5fr) minmax(250px, 0.8fr) minmax(150px, 15vh);
-    background: turquoise;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(60px, 12vh) minmax(300px, 1fr) minmax(200px, 0.6fr) minmax(300px, 1fr) minmax(700px, 2fr) minmax(250px, 0.8fr) minmax(200px, 15vh);
 }
 
 #grid_wrapper_index h2 {
-    text-decoration: underline;
+    color: rgb(165, 226, 74);
 }
 
 #membership {
     grid-area: s1;
-    background: greenyellow;
+    background: rgb(165, 226, 74);
+    color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 #membership_button {
-    text-decoration: none;
-    background: grey;
-    border: 5px solid indigo;
+    background: rgb(0, 0, 0);
+    color: white;
     margin: 20px;
     padding: 10px;
-    border-radius: 20%;
-    text-decoration: none;
+    border-radius: 10px;
+    text-decoration: underline;
 }
 
 #description {
@@ -151,7 +160,9 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background: violet;
+    text-align: center;
+    background: black;
+    color: rgb(230, 252, 255);
 }
 
 #games_index {
@@ -159,8 +170,16 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    background: papayawhip;
+    text-align: center;
+    justify-content: space-evenly;
+    color: rgb(230, 252, 255);
+    background: black;
+}
+
+#games_index img {
+    width: 40%;
+    border-radius: 20px;
+    border: rgb(165, 226, 74) 2px solid;
 }
 
 #news_index {
@@ -169,16 +188,39 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+#news_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .news_article {
-    background: rgba(121, 121, 121, 0.8);
-    border: 2px solid rgb(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: rgb(234, 255, 240);
+    border: 4px solid rgb(165, 226, 74);
+    color: black;
     border-radius: 10%;
-    padding: 5px;
-    margin: 5px;
-    height: 1fr;
-    width: 50%;
+    padding: 10px;
+    margin: 20px;
+    height: 150px;
+    width: 90%;
+}
+
+.news_article a {
+    color: black;
+    font-weight: bold;
+
+}
+
+.news_article h3 {
+    text-decoration: underline;
 }
 
 #schedule_index {
@@ -187,6 +229,8 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    background: black;
+    color: white;
 }
 
 #business_hours_index {
@@ -208,8 +252,8 @@ nav {
     "s2"
     "fo"
     ;
-    grid-template-columns: 300px;
-    grid-template-rows: minmax(60px, 12vh) minmax(100px, 0.1fr) minmax(1100px, 1fr) minmax(150px, 15vh);
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(60px, 12vh) minmax(100px, 0.1fr) minmax(1100px, 1fr) minmax(200px, 15vh);
 }
 
 #games_title {
@@ -217,13 +261,12 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: powderblue;
-    text-decoration: underline;
+    background:rgb(165, 226, 74);
 }
 
 #games_list {
     grid-area: s2;
-    background: lightcoral;
+    background: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -238,11 +281,22 @@ nav {
 }
 
 .games_list_article {
-    background: rgb(144, 238, 144, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: rgb(165, 226, 74);
     margin: 15px;
     padding: 5px;
-    border: solid 2px lightseagreen;
+    border: solid 2px rgb(234, 255, 240);
     border-radius: 10px;
+    width: 80%;
+}
+
+.games_list_article img {
+    width: 100%;
+    border-radius: 20px;
+    border: rgb(234, 255, 240) 4px solid;
 }
 
 /* About & Contact stuff */
@@ -258,13 +312,12 @@ nav {
     "s5"
     "fo"
     ;
-    grid-template-columns: 300px;
-    grid-template-rows: minmax(60px, 12vh) minmax(150px, 0.35fr) minmax(200px, 0.4fr) minmax(550px, 1fr) minmax(300px, 0.75fr) minmax(1500px, 5fr) minmax(150px, 15vh);
-    background: lightgoldenrodyellow;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(60px, 12vh) minmax(150px, 0.35fr) minmax(200px, 0.4fr) minmax(550px, 1fr) minmax(300px, 0.75fr) minmax(1500px, 2.8fr) minmax(200px, 15vh);
 }
 
 #about_contact_wrapper h2 {
-    text-decoration: underline;
+    color: rgb(165, 226, 74);
 }
 
 #about_title {
@@ -272,7 +325,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: lightsteelblue;
+    background: rgb(165, 226, 74);
 }
 
 #contact_information {
@@ -280,17 +333,16 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
-    background: chartreuse;
-}
-
-#contact_information p {
-    margin: 5px;
+    justify-content: space-evenly;
+    background: black;
+    color: white;
+    letter-spacing: 0.1875rem;
+    padding-left: 20px;
 }
 
 #contact_information a {
     text-decoration: underline;
-    color: blue;
+    color: rgb(165, 226, 74);
 }
 
 #history {
@@ -299,12 +351,13 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background: blueviolet;
+    background: black;
+    color: white;
     padding: 5px;
 }
 
-.history_art {
-    background: rgba(255, 29, 29);
+#history h3 {
+    color: rgb(165, 226, 74);
 }
 
 #faq {
@@ -313,8 +366,13 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background: teal;
+    background: black;
+    color: white;
     word-spacing: 0.1rem;
+}
+
+#faq strong {
+    color: rgb(165, 226, 74);
 }
 
 #faq_wrapper {
@@ -326,9 +384,7 @@ nav {
 
 .faq_question {
     padding: 5px;
-    margin: 5px;
-    border: solid 1px salmon;
-    background: chartreuse;
+    margin-bottom: 30px;
 }
 
 #faq strong {
@@ -340,12 +396,31 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgb(165, 226, 74);
 }
+
+.gallery_photo {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border: black 4px solid;
+    border-radius: 50px;
+}
+
+.gallery_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
 
 /* Schedule stuff */
 
-#schedule_wrapper {
+#schedule_wrapper 
+{
     display: grid;
     grid-template-areas: 
     "he"
@@ -353,9 +428,12 @@ nav {
     "s2"
     "fo"
     ;
-    grid-template-columns: 300px;
-    grid-template-rows: minmax(60px, 12vh) minmax(150px, 0.15fr) minmax(1200px, 1fr) minmax(150px, 15vh);
-    background: chocolate;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(60px, 12vh) minmax(150px, 0.15fr) minmax(1200px, 1fr) minmax(200px, 15vh);
+}
+
+#schedule_wrapper h2 {
+    color: rgb(165, 226, 74);
 }
 
 #business_hours {
@@ -364,10 +442,16 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    background: rgb(165, 226, 74);
+    text-align: center;
 }
 
-#business_hours h2{
-    text-decoration: underline;
+#business_hours h2 {
+    color: black;
+}
+
+#business_hours p {
+    height: 2rem;
 }
 
 #events {
@@ -375,18 +459,20 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    background: red;
+    justify-content: space-evenly;
+    background: black;
 }
 
 .event_article {
-    background: yellowgreen;
-    border: solid 5px yellow;
+    background: rgb(165, 226, 74);
+    border-radius: 10px;
     margin: 10px;
+    margin-top: 30px;
     padding: 10px;
 }
 
 /* Footer stuff */
+
 footer {
     grid-area: fo;
     display: grid;
@@ -396,8 +482,9 @@ footer {
     ;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    background: orange;
-    border-top: solid 4px red;
+    background: black;
+    border-top: solid 5px rgb(165, 226, 74);
+    color: rgb(230, 252, 255);
     padding: 5px;
 }
 
@@ -407,7 +494,11 @@ footer {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border-right: red 2px solid;
+    border-right: rgb(165, 226, 74) 2px solid;
+}
+
+#socials_footer img {
+    width: 50px;
 }
 
 #socials_wrapper {
@@ -422,7 +513,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border-bottom: red 2px solid;
+    border-bottom: rgb(165, 226, 74) 2px solid;
 }
 
 #address_footer {
@@ -433,7 +524,26 @@ footer {
     justify-content: space-evenly;
 }
 
+/* datorskarm anpassning */
+
 @media screen and (min-width: 768px) {
+
+    /* header */
+
+    #nav_links {
+        width: 200px;
+    }
+    
+    #nav_links a {
+        width: 200px;
+        font-size: 1.3125rem;
+    }
+
+    #nav_links a:hover {
+        font-weight: normal;
+        background-color: black;
+        color: rgb(165, 226, 74);
+    }
 
     /* index */
 
@@ -448,7 +558,7 @@ footer {
         "fo fo"
         ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(60px, 12vh) minmax(200px, 1fr) minmax(200px, 0.8fr) minmax(100px, 0.5fr) minmax(150px, 0.8fr) minmax(400px, 2fr) minmax(150px, 15vh);
+    grid-template-rows: minmax(60px, 12vh) minmax(200px, 1.5fr) minmax(200px, 0.8fr) minmax(100px, 0.5fr) minmax(150px, 0.8fr) minmax(400px, 2fr) minmax(150px, 15vh);
     }
 
     .news_article {
@@ -463,6 +573,7 @@ footer {
 
     #news_wrapper {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     }
@@ -471,8 +582,16 @@ footer {
 
     #games_wrapper {
         grid-template-columns: 1fr;
-        grid-template-rows: minmax(60px, 12vh) minmax(150px, 0.25fr) minmax(1000px, 1fr) minmax(150px, 15vh);
-        background: salmon;
+        grid-template-rows: minmax(60px, 12vh) minmax(100px, 0.15fr) minmax(1000px, 1fr) minmax(150px, 15vh);
+    }
+
+    .games_list_article {
+        flex-direction: row;
+    }
+
+    .games_list_article img {
+        width: 20%;
+        margin: 10px;
     }
 
     /* about contact */
@@ -488,7 +607,7 @@ footer {
         "fo fo"
         ;
         grid-template-columns: 0.6fr 1fr;
-        grid-template-rows: minmax(60px, 12vh) minmax(150px, 0.2fr) minmax(300px, 0.6fr) minmax(300px, 0.6fr) minmax(600px, 1fr) minmax(150px, 15vh);
+        grid-template-rows: minmax(60px, 12vh) minmax(100px, 0.25fr) minmax(300px, 0.6fr) minmax(300px, 0.6fr) minmax(600px, 1fr) minmax(150px, 15vh);
     }
     
     .faq_question {
@@ -496,17 +615,47 @@ footer {
         margin-top: 20px;
     }
 
-    #gallery_wrapper {
+    #gallery {
+        justify-content: space-around;
+    }
+
+    #gallery_wrapper_top {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
     }
 
-    .gallery_photo {
-        width: 200px;
-        height: 200px;
-        margin: 20px;
-        background: red;
+    #gallery_wrapper_bottom {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
     }
+
+    /* schedule */
+
+    #schedule_wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(60px, 12vh) minmax(150px, 0.2fr) minmax(500px, 1fr)  minmax(150px, 15vh);
+    }
+
+    #events h2 {
+        margin-top: 20px;
+    }
+
+    #events_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    
+    .event_article {
+        flex: 1 0 31%;
+        width: 10%;
+        height: auto;
+        margin: 5%;
+        padding: 20px;
+    }
+
 }
