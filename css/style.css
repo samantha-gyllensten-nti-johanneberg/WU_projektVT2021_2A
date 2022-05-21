@@ -6,18 +6,22 @@
     box-sizing: border-box;
 }
 
-h1 {
-    font-size: 3.4375rem;
-    font-family: 'Cinzel', serif;
+* p {
+    max-width: 45ch;
 }
 
-h2 {
+h1 {
     font-size: 2.125rem;
     font-family: 'Cinzel', serif;
 }
 
+h2 {
+    font-size: 1.313rem;
+    font-family: 'Cinzel', serif;
+}
+
 h3 {
-    font-size: 1.3125rem;
+    font-size: 0.8125rem;
     font-family: 'Cinzel', serif;
 }
 
@@ -127,7 +131,7 @@ nav {
     "fo"
     ;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(60px, 12vh) minmax(300px, 1fr) minmax(200px, 0.6fr) minmax(300px, 1fr) minmax(700px, 2fr) minmax(250px, 0.8fr) minmax(200px, 15vh);
+    grid-template-rows: minmax(60px, 12vh) minmax(300px, 1fr) minmax(200px, 0.6fr) minmax(300px, 1fr) minmax(700px, 2fr) minmax(400px, 0.6fr) minmax(200px, 15vh);
 }
 
 #grid_wrapper_index h2 {
@@ -163,6 +167,7 @@ nav {
     text-align: center;
     background: black;
     color: rgb(230, 252, 255);
+    padding: 5px;
 }
 
 #games_index {
@@ -191,15 +196,16 @@ nav {
     text-align: center;
     background: black;
     color: white;
+    padding: 10px;
 }
 
-#news_wrapper {
+#news_wrapper_index {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.news_article {
+.news_article_index {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -210,7 +216,7 @@ nav {
     padding: 10px;
     margin: 20px;
     height: 150px;
-    width: 90%;
+    width: 80%;
 }
 
 .news_article a {
@@ -234,13 +240,14 @@ nav {
 }
 
 #business_hours_index {
-    grid-area: bh;
+    width: 80%;
+    text-align: center;
 }
 
-#events_index {
-    grid-area: ev;
+#special_dates_index {
+    width: 80%;
+    text-align: center;
 }
-
 
 /* Games stuff */
 
@@ -250,34 +257,72 @@ nav {
     "he"
     "s1"
     "s2"
+    "s3"
     "fo"
     ;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(60px, 12vh) minmax(100px, 0.1fr) minmax(1100px, 1fr) minmax(200px, 15vh);
+    grid-template-rows: minmax(60px, 12vh) minmax(300px, 0.2fr) minmax(1500px, 1fr)  minmax(7700px, 5.1fr) minmax(200px, 15vh);
 }
 
-#games_title {
+#summary_list_games {
     grid-area: s1;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    background:rgb(165, 226, 74);
+    background:yellow;
+}
+
+#summary_list_games h2 {
+    margin-top: 10px;
+}
+
+#summary_list_games ul {
+    background: blue;
+    border: 2px solid black;
+    border-radius: 5%;
+    width: 60%;
+    height: 70%;
+    list-style: none;
+    letter-spacing: 0.1875rem;
+    font-size: 1.3125rem;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+#summary_list_games a {
+    text-decoration: none;
+    color: black;
+    height: 3rem;
+}
+
+#suggested_list {
+    grid-area: s2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background: tomato;
 }
 
 #games_list {
-    grid-area: s2;
-    background: black;
+    grid-area: s3;
+    background: turquoise;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    text-align: center;
+    padding: 5px;
 } 
 
-#games_list h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
+#games_list h1 {
+    margin: 20px;
+    color: white;
 }
 
 .games_list_article {
@@ -287,7 +332,8 @@ nav {
     flex-direction: column;
     background: rgb(165, 226, 74);
     margin: 15px;
-    padding: 5px;
+    margin-bottom: 30px;
+    padding: 10px;
     border: solid 2px rgb(234, 255, 240);
     border-radius: 10px;
     width: 80%;
@@ -296,6 +342,7 @@ nav {
 .games_list_article img {
     width: 100%;
     border-radius: 20px;
+    margin: 5px;
     border: rgb(234, 255, 240) 4px solid;
 }
 
@@ -309,35 +356,26 @@ nav {
     "s2"
     "s3"
     "s4"
-    "s5"
     "fo"
     ;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(60px, 12vh) minmax(150px, 0.35fr) minmax(200px, 0.4fr) minmax(550px, 1fr) minmax(300px, 0.75fr) minmax(1500px, 2.8fr) minmax(200px, 15vh);
+    grid-template-rows: minmax(60px, 12vh) minmax(300px, 0.5fr) minmax(650px, 1fr) minmax(450px, 0.7fr) minmax(1500px, 2.35fr) minmax(200px, 15vh);
 }
 
 #about_contact_wrapper h2 {
     color: rgb(165, 226, 74);
 }
 
-#about_title {
+#contact_information {
     grid-area: s1;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgb(165, 226, 74);
-}
-
-#contact_information {
-    grid-area: s2;
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-evenly;
     background: black;
     color: white;
-    letter-spacing: 0.1875rem;
-    padding-left: 20px;
+    font-size: 1.3125rem;
+    text-align: center;
 }
 
 #contact_information a {
@@ -346,14 +384,15 @@ nav {
 }
 
 #history {
-    grid-area: s3;
+    grid-area: s2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     background: black;
     color: white;
-    padding: 5px;
+    background: cyan;
+    padding: 10px;
 }
 
 #history h3 {
@@ -361,7 +400,7 @@ nav {
 }
 
 #faq {
-    grid-area: s4;
+    grid-area: s3;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -369,6 +408,8 @@ nav {
     background: black;
     color: white;
     word-spacing: 0.1rem;
+    background: crimson;
+    padding: 10px;
 }
 
 #faq strong {
@@ -392,48 +433,50 @@ nav {
 }
 
 #gallery {
-    grid-area: s5;
+    grid-area: s4;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-around;
     background-color: rgb(165, 226, 74);
 }
 
+#gallery h2 {
+    color: black;
+    margin-top: 20px;
+}
+
 .gallery_photo {
-    width: 200px;
-    height: 200px;
-    margin: 20px;
+    width: 275px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border: black 4px solid;
     border-radius: 50px;
 }
 
-.gallery_wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-
 /* Schedule stuff */
 
-#schedule_wrapper 
-{
+#schedule_wrapper {
     display: grid;
     grid-template-areas: 
     "he"
     "s1"
     "s2"
+    "s3"
+    "s4"
     "fo"
     ;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(60px, 12vh) minmax(150px, 0.15fr) minmax(1200px, 1fr) minmax(200px, 15vh);
+    grid-template-rows: minmax(60px, 12vh) minmax(150px, 0.15fr) minmax(150px, 0.15fr) minmax(1400px, 1fr) minmax(700px, 0.55fr) minmax(200px, 15vh);
+}
+
+#schedule_wrapper h1 {
+    color: rgb(165, 226, 74);
 }
 
 #schedule_wrapper h2 {
-    color: rgb(165, 226, 74);
+    color: cornflowerblue;
 }
 
 #business_hours {
@@ -446,6 +489,15 @@ nav {
     text-align: center;
 }
 
+#special_dates {
+    grid-area: s2;
+    background: darkcyan;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 #business_hours h2 {
     color: black;
 }
@@ -455,12 +507,30 @@ nav {
 }
 
 #events {
-    grid-area: s2;
+    grid-area: s3;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     background: black;
+}
+
+#events_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#events_suggestions {
+    text-align: center;
+    margin: 20px;
+    background: lemonchiffon;
+    border: 2px solid azure;
+    border-radius: 10px;
+}
+
+#events h3 {
+    color: palevioletred;
 }
 
 .event_article {
@@ -469,6 +539,25 @@ nav {
     margin: 10px;
     margin-top: 30px;
     padding: 10px;
+}
+
+#news {
+    grid-area: s4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: orange;
+}
+
+.news_article {
+    background: palevioletred;
+    height: auto;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin: 30px;
 }
 
 /* Footer stuff */
@@ -571,7 +660,7 @@ footer {
         flex-direction: column;
     }
 
-    #news_wrapper {
+    #news_wrapper_index {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -581,17 +670,40 @@ footer {
     /* games */
 
     #games_wrapper {
-        grid-template-columns: 1fr;
-        grid-template-rows: minmax(60px, 12vh) minmax(100px, 0.15fr) minmax(1000px, 1fr) minmax(150px, 15vh);
+        grid-template-areas: 
+    "he he"
+    "s1 s2"
+    "s3 s3"
+    "fo fo"
+    ;
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-rows: minmax(60px, 12vh) minmax(500px, 0.8fr) minmax(3500px, 5fr) minmax(150px, 15vh);
     }
 
     .games_list_article {
+        width: 80%;
+        height: auto;
         flex-direction: row;
+        text-align: left;
     }
 
     .games_list_article img {
-        width: 20%;
+        width: 40%;
         margin: 10px;
+    }
+
+    #summary_list_games {
+        justify-content: space-evenly;
+    }
+    
+    #summary_list_games ul {
+        justify-content: space-around;
+        text-align: center;
+        height: 80%;
+    }
+    
+    #suggested_list {
+        padding-top: 40px;
     }
 
     /* about contact */
@@ -600,14 +712,17 @@ footer {
         display: grid;
         grid-template-areas: 
         "he he"
-        "s1 s1"
-        "s2 s3"
+        "s1 s2"
+        "s3 s3"
         "s4 s4"
-        "s5 s5"
         "fo fo"
         ;
-        grid-template-columns: 0.6fr 1fr;
-        grid-template-rows: minmax(60px, 12vh) minmax(100px, 0.25fr) minmax(300px, 0.6fr) minmax(300px, 0.6fr) minmax(600px, 1fr) minmax(150px, 15vh);
+        grid-template-columns: minmax(300px, 0.5fr) 1fr;
+        grid-template-rows: minmax(60px, 12vh) minmax(650px, 1fr) minmax(450px, 0.7fr) minmax(1300px, 2.1fr) minmax(150px, 15vh);
+    }
+
+    #contact_information {
+        padding: 1rem;
     }
     
     .faq_question {
@@ -616,46 +731,72 @@ footer {
     }
 
     #gallery {
-        justify-content: space-around;
-    }
-
-    #gallery_wrapper_top {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
         justify-content: space-evenly;
     }
 
-    #gallery_wrapper_bottom {
+    #gallery_wrapper {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
+    }
+
+    .gallery_photo {
+        width: 275px;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: black 4px solid;
+        border-radius: 50px;
+
+        flex: 1 0 31%;
+        margin: 5%;
     }
 
     /* schedule */
 
     #schedule_wrapper {
-        grid-template-columns: 1fr;
-        grid-template-rows: minmax(60px, 12vh) minmax(150px, 0.2fr) minmax(500px, 1fr)  minmax(150px, 15vh);
-    }
+    grid-template-areas: 
+    "he he"
+    "s1 s2"
+    "s3 s3"
+    "s4 s4"
+    "fo fo"
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(60px, 12vh) minmax(200px, 0.4fr) minmax(1000px, 1fr) minmax(600px, 0.65fr) minmax(200px, 15vh);
+}
 
-    #events h2 {
+    #events h1 {
         margin-top: 20px;
     }
 
     #events_wrapper {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
 
     }
     
     .event_article {
         flex: 1 0 31%;
-        width: 10%;
         height: auto;
         margin: 5%;
         padding: 20px;
     }
 
+    #news {
+        padding-top: 20px;
+    }
+
+    #news_wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .news_article {
+        flex: 1 0 31%;
+        height: auto;
+        margin: 5%;
+    }
 }
