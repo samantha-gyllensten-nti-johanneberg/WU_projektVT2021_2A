@@ -34,16 +34,20 @@ p {
 
 header {
     grid-area: he;
-    background: black;
-    color: rgb(165, 226, 74);
+    background: #06050C;
+    color: #6AF9E0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: #6AF9E0 3px solid;
 }
 
 header img {
-    width: 60px;
-    border-radius: 50px;
+    width: 80px;
+    height: auto;
+    margin-left: 5px;
+    border-radius: 100px;
+    border: #6AF9E0 2px solid;
 }
 
 nav {
@@ -62,7 +66,7 @@ nav {
     right: 0px;
     width: 100%;
     align-items: center;
-    background: rgb(165, 226, 74);
+    background: #6AF9E0;
     transition: all 0.5s;
 }
 
@@ -94,17 +98,18 @@ nav {
 }
 
 .hamburger_line {
-    width: 30px;
+    width: 35px;
     height: 4px;
-    background: rgb(165, 226, 74);
-    margin: 7px;
+    background: #6AF9E0;
+    margin: 8px;
+    margin-right: 10px;
     border-radius: 10%;
     transition: all 0.5s;
     cursor: pointer;
 }
 
 .crossed_line #line1 {
-    transform: rotate(-45deg) translate(-5px, 10px);
+    transform: rotate(-45deg) translate(-7px, 10px);
     background: black;
 }
 
@@ -113,7 +118,7 @@ nav {
 }
 
 .crossed_line #line3 {
-    transform: rotate(45deg) translate(-5px, -10px);
+    transform: rotate(45deg) translate(-7px, -10px);
     background: black;
 }
 
@@ -131,31 +136,35 @@ nav {
     "fo"
     ;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(60px, 12vh) minmax(300px, 1fr) minmax(200px, 0.6fr) minmax(300px, 1fr) minmax(700px, 2fr) minmax(400px, 0.6fr) minmax(200px, 15vh);
-}
-
-#grid_wrapper_index h2 {
-    color: rgb(165, 226, 74);
+    grid-template-rows: minmax(100px, 18vh) minmax(300px, 1fr) minmax(200px, 0.67fr) minmax(300px, 1fr) minmax(700px, 2.3fr) minmax(400px, 1.33fr) minmax(200px, 20vh);
 }
 
 #membership {
     grid-area: s1;
-    background: rgb(165, 226, 74);
-    color: black;
+    background-image: url("../img/background_membership.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #06050C;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    border-bottom: #FF3678 solid 5px;
 }
 
 #membership_button {
-    background: rgb(0, 0, 0);
-    color: white;
+    background: #6AF9E0;
+    color: #06050C;
     margin: 20px;
     padding: 10px;
     border-radius: 10px;
     text-decoration: underline;
+}
+
+#membership_button h2 {
+    color: #06050C;
 }
 
 #description {
@@ -165,9 +174,10 @@ nav {
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-    background: black;
-    color: rgb(230, 252, 255);
+    background: #06050C;
+    color: #FFFFFF;
     padding: 5px;
+    border-bottom: #FF3678 solid 5px;
 }
 
 #games_index {
@@ -177,14 +187,15 @@ nav {
     align-items: center;
     text-align: center;
     justify-content: space-evenly;
-    color: rgb(230, 252, 255);
-    background: black;
+    color: #FFFFFF;
+    background: #06050C;
 }
 
 #games_index img {
     width: 40%;
     border-radius: 20px;
-    border: rgb(165, 226, 74) 2px solid;
+    border-right: #6AF9E0 4px solid;
+    border-left: #FF3678 4px solid;
 }
 
 #news_index {
@@ -194,8 +205,8 @@ nav {
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-    background: black;
-    color: white;
+    background: #06050C;
+    color: #FFFFFF;
     padding: 10px;
 }
 
@@ -209,8 +220,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background: rgb(234, 255, 240);
-    border: 4px solid rgb(165, 226, 74);
+    background: #6AF9E0;
     color: black;
     border-radius: 10%;
     padding: 10px;
@@ -219,13 +229,9 @@ nav {
     width: 80%;
 }
 
-.news_article a {
-    color: black;
+.news_article_index a {
+    color: #06050C;
     font-weight: bold;
-
-}
-
-.news_article h3 {
     text-decoration: underline;
 }
 
@@ -235,18 +241,32 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background: black;
-    color: white;
+    background: #06050C;
+    color: #FFFFFF;
+}
+
+#schedule_index p {
+    margin: 5px;
 }
 
 #business_hours_index {
     width: 80%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: #6AF9E0 solid 3px;
+    border-radius: 10px;
 }
 
 #special_dates_index {
     width: 80%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: #6AF9E0 solid 3px;
+    border-radius: 10px;
 }
 
 /* Games stuff */
@@ -261,7 +281,7 @@ nav {
     "fo"
     ;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(60px, 12vh) minmax(300px, 0.2fr) minmax(1500px, 1fr)  minmax(7700px, 5.1fr) minmax(200px, 15vh);
+    grid-template-rows: minmax(100px, 18vh) minmax(300px, 0.2fr) minmax(1500px, 1fr)  minmax(7700px, 5.1fr) minmax(200px, 20vh);
 }
 
 #summary_list_games {
@@ -270,7 +290,9 @@ nav {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background:yellow;
+    background:#06050C;
+    color: #FFFFFF;
+    border-bottom: #FF3678 solid 5px;
 }
 
 #summary_list_games h2 {
@@ -278,8 +300,8 @@ nav {
 }
 
 #summary_list_games ul {
-    background: blue;
-    border: 2px solid black;
+    background: #6AF9E0;
+    border: 3px solid black;
     border-radius: 5%;
     width: 60%;
     height: 70%;
@@ -300,18 +322,25 @@ nav {
     height: 3rem;
 }
 
+#summary_list_games a:hover {
+    font-weight: bold;
+}
+
 #suggested_list {
     grid-area: s2;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    background: tomato;
+    background: #06050C;
+    color: #FFFFFF;
+    border-bottom: #FF3678 solid 5px;
 }
 
 #games_list {
     grid-area: s3;
-    background: turquoise;
+    background: #06050C;
+    color: #FFFFFF;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -320,30 +349,35 @@ nav {
     padding: 5px;
 } 
 
-#games_list h1 {
+.games_text h1 {
     margin: 20px;
-    color: white;
 }
 
 .games_list_article {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    text-align: left;
     flex-direction: column;
-    background: rgb(165, 226, 74);
+    background: #FFFFFF;
+    color: #06050C;
     margin: 15px;
     margin-bottom: 30px;
     padding: 10px;
-    border: solid 2px rgb(234, 255, 240);
+    border-left: #FF3678 5px solid;
+    border-right: #6AF9E0 5px solid;
     border-radius: 10px;
     width: 80%;
+}
+
+.games_list_article h3 {
+    margin-bottom: 0.5rem;
 }
 
 .games_list_article img {
     width: 100%;
     border-radius: 20px;
     margin: 5px;
-    border: rgb(234, 255, 240) 4px solid;
 }
 
 /* About & Contact stuff */
@@ -359,11 +393,7 @@ nav {
     "fo"
     ;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(60px, 12vh) minmax(300px, 0.5fr) minmax(650px, 1fr) minmax(450px, 0.7fr) minmax(1500px, 2.35fr) minmax(200px, 15vh);
-}
-
-#about_contact_wrapper h2 {
-    color: rgb(165, 226, 74);
+    grid-template-rows: minmax(100px, 18vh) minmax(300px, 0.5fr) minmax(650px, 1fr) minmax(450px, 0.7fr) minmax(1400px, 2.16fr) minmax(200px, 20vh);
 }
 
 #contact_information {
@@ -372,15 +402,26 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background: black;
-    color: white;
+    background: #06050C;
+    color: #FFFFFF;
     font-size: 1.3125rem;
     text-align: center;
+    border-bottom: #FF3678 5px solid;
 }
 
 #contact_information a {
     text-decoration: underline;
-    color: rgb(165, 226, 74);
+    color: #FF3678;
+}
+
+#contact_information ul {
+    height: 50%;
+    list-style: none;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 #history {
@@ -389,14 +430,13 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background: black;
-    color: white;
-    background: cyan;
+    color: #FFFFFF;
+    background: #06050C;
     padding: 10px;
 }
 
-#history h3 {
-    color: rgb(165, 226, 74);
+#history h2 {
+    color: #6AF9E0;
 }
 
 #faq {
@@ -405,15 +445,16 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background: black;
-    color: white;
+    color: #FFFFFF;
     word-spacing: 0.1rem;
-    background: crimson;
+    background: #06050C;
     padding: 10px;
+    border-bottom: #FF3678 5px solid;
 }
 
 #faq strong {
-    color: rgb(165, 226, 74);
+    color: #6AF9E0;
+    text-decoration: underline;
 }
 
 #faq_wrapper {
@@ -428,17 +469,21 @@ nav {
     margin-bottom: 30px;
 }
 
-#faq strong {
-    text-decoration: underline;
-}
-
 #gallery {
     grid-area: s4;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+    background-color: #06050C;
+    color: #FFFFFF;
+}
+
+#gallery_wrapper {
+    display: flex;
     justify-content: space-around;
-    background-color: rgb(165, 226, 74);
+    align-items: center;
+    flex-direction: column;
 }
 
 #gallery h2 {
@@ -451,13 +496,14 @@ nav {
     height: auto;
     margin-top: 20px;
     margin-bottom: 20px;
-    border: black 4px solid;
+    border-left: #FF3678 4px solid;
+    border-right: #6AF9E0 4px solid;
     border-radius: 50px;
 }
 
-/* Schedule stuff */
+/* Dates and Times stuff */
 
-#schedule_wrapper {
+#dates_times_wrapper {
     display: grid;
     grid-template-areas: 
     "he"
@@ -468,15 +514,7 @@ nav {
     "fo"
     ;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(60px, 12vh) minmax(150px, 0.15fr) minmax(150px, 0.15fr) minmax(1400px, 1fr) minmax(700px, 0.55fr) minmax(200px, 15vh);
-}
-
-#schedule_wrapper h1 {
-    color: rgb(165, 226, 74);
-}
-
-#schedule_wrapper h2 {
-    color: cornflowerblue;
+    grid-template-rows: minmax(100px, 18vh) minmax(200px, 0.125fr) minmax(200px, 0.125fr) minmax(1600px, 1fr) minmax(950px, 0.6fr) minmax(200px, 20vh);
 }
 
 #business_hours {
@@ -485,21 +523,18 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background: rgb(165, 226, 74);
+    background: #6AF9E0;
     text-align: center;
+    border-bottom: #06050C 3px solid;
 }
 
 #special_dates {
     grid-area: s2;
-    background: darkcyan;
+    background: #6AF9E0;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-}
-
-#business_hours h2 {
-    color: black;
 }
 
 #business_hours p {
@@ -512,7 +547,9 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background: black;
+    padding: 10px;
+    background: #06050C;
+    color: #FFFFFF;
 }
 
 #events_wrapper {
@@ -524,17 +561,17 @@ nav {
 #events_suggestions {
     text-align: center;
     margin: 20px;
-    background: lemonchiffon;
-    border: 2px solid azure;
-    border-radius: 10px;
 }
 
-#events h3 {
-    color: palevioletred;
+#events a {
+    text-decoration: underline;
+    color: #6AF9E0;
 }
 
 .event_article {
-    background: rgb(165, 226, 74);
+    background: #FFFFFF;
+    color: #06050C;
+    border: #6AF9E0 3px solid;
     border-radius: 10px;
     margin: 10px;
     margin-top: 30px;
@@ -547,11 +584,14 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background: orange;
+    background: #06050C;
+    color: #FFFFFF;
 }
 
 .news_article {
-    background: palevioletred;
+    background: #FFFFFF;
+    color: #06050C;
+    border: #6AF9E0 3px solid;
     height: auto;
     color: black;
     border-radius: 10px;
@@ -572,9 +612,13 @@ footer {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     background: black;
-    border-top: solid 5px rgb(165, 226, 74);
+    border-top: solid 5px #6AF9E0;
     color: rgb(230, 252, 255);
     padding: 5px;
+}
+
+footer h2 {
+    color: #6AF9E0;
 }
 
 #socials_footer {
@@ -583,15 +627,17 @@ footer {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border-right: rgb(165, 226, 74) 2px solid;
+    border-right: #6AF9E0 2px solid;
 }
 
-#socials_footer img {
-    width: 50px;
+#socials_footer a {
+    color: #6AF9E0;
 }
 
 #socials_wrapper {
     display: flex;
+    flex-direction: column;
+    height: 70%;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -602,7 +648,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border-bottom: rgb(165, 226, 74) 2px solid;
+    border-bottom: #6AF9E0 2px solid;
 }
 
 #address_footer {
@@ -620,7 +666,10 @@ footer {
     /* header */
 
     #nav_links {
-        width: 200px;
+        width: 250px;
+        padding-right: 40px;
+        border-left: #06050C solid 4px;
+        border-bottom: #06050C solid 4px;
     }
     
     #nav_links a {
@@ -630,8 +679,8 @@ footer {
 
     #nav_links a:hover {
         font-weight: normal;
-        background-color: black;
-        color: rgb(165, 226, 74);
+        background-color: #06050C;
+        color: #FF3678;
     }
 
     /* index */
@@ -647,11 +696,19 @@ footer {
         "fo fo"
         ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(60px, 12vh) minmax(200px, 1.5fr) minmax(200px, 0.8fr) minmax(100px, 0.5fr) minmax(150px, 0.8fr) minmax(400px, 2fr) minmax(150px, 15vh);
+    grid-template-rows: minmax(100px, 18vh) minmax(300px, 1fr) minmax(300px, 1fr) minmax(100px, 0.5fr) minmax(150px, 0.75fr) minmax(500px, 1.7fr) minmax(200px, 20vh);
+    }
+
+    #description p {
+        max-width: 60ch;
+    }
+
+    #news_index p {
+        max-width: 60ch;
     }
 
     .news_article {
-        height: 200px;
+        height: 250px;
         width: 25%;
         padding: 10px;
     }
@@ -667,6 +724,14 @@ footer {
     justify-content: space-around;
     }
 
+    #business_hours_index {
+        width: 60%;
+    }
+    
+    #special_dates_index {
+        width: 60%;
+    }
+
     /* games */
 
     #games_wrapper {
@@ -676,8 +741,8 @@ footer {
     "s3 s3"
     "fo fo"
     ;
-        grid-template-columns: 0.5fr 1fr;
-        grid-template-rows: minmax(60px, 12vh) minmax(500px, 0.8fr) minmax(3500px, 5fr) minmax(150px, 15vh);
+        grid-template-columns: minmax(250px, 0.5fr) 1fr;
+        grid-template-rows: minmax(100px, 18vh) minmax(500px, 0.8fr) minmax(3500px, 5fr) minmax(200px, 20vh);
     }
 
     .games_list_article {
@@ -690,20 +755,27 @@ footer {
     .games_list_article img {
         width: 40%;
         margin: 10px;
+        margin-right: 20px;
     }
 
     #summary_list_games {
         justify-content: space-evenly;
+        border-right: #FF3678 dashed 3px;
     }
     
     #summary_list_games ul {
         justify-content: space-around;
         text-align: center;
         height: 80%;
+        width: 80%;
     }
     
     #suggested_list {
         padding-top: 40px;
+    }
+
+    #games_list p {
+        max-width: 65ch;
     }
 
     /* about contact */
@@ -712,19 +784,39 @@ footer {
         display: grid;
         grid-template-areas: 
         "he he"
-        "s1 s2"
-        "s3 s3"
+        "s1 s1"
+        "s3 s2"
         "s4 s4"
         "fo fo"
         ;
         grid-template-columns: minmax(300px, 0.5fr) 1fr;
-        grid-template-rows: minmax(60px, 12vh) minmax(650px, 1fr) minmax(450px, 0.7fr) minmax(1300px, 2.1fr) minmax(150px, 15vh);
+        grid-template-rows: minmax(100px, 18vh) minmax(200px, 0.45fr) minmax(500px, 1fr) minmax(1700px, 3.4fr) minmax(200px, 20vh);
     }
 
     #contact_information {
         padding: 1rem;
     }
+
+    #history {
+        border-bottom: #FF3678 solid 5px;
+    }
+
+    #history p {
+        max-width: 65ch;
+    }
+
+    #faq {
+        border-right: #FF3678 dashed 3px;
+    }
     
+    #faq h1 {
+        margin-top: 20px;
+    }
+
+    #faq p {
+        max-width: 65ch;
+    }
+
     .faq_question {
         padding: 10px;
         margin-top: 20px;
@@ -738,23 +830,30 @@ footer {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+        justify-content: center;
     }
 
     .gallery_photo {
-        width: 275px;
-        height: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        max-width: 600px;
+        margin: 5%;
         border: black 4px solid;
         border-radius: 50px;
-
         flex: 1 0 31%;
         margin: 5%;
     }
 
-    /* schedule */
+    /* Dates and  Times */
 
-    #schedule_wrapper {
+    #business_hours {
+        border-right: #06050C dashed 3px;
+        border-bottom: #FF3678 5px solid;
+    }
+
+    #special_dates {
+        border-bottom: #FF3678 5px solid;
+    }
+
+    #dates_times_wrapper {
     grid-template-areas: 
     "he he"
     "s1 s2"
@@ -763,7 +862,7 @@ footer {
     "fo fo"
     ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(60px, 12vh) minmax(200px, 0.4fr) minmax(1000px, 1fr) minmax(600px, 0.65fr) minmax(200px, 15vh);
+    grid-template-rows: minmax(100px, 18vh) minmax(200px, 0.2fr) minmax(1200px, 1fr) minmax(800px, 0.75fr) minmax(200px, 20vh);
 }
 
     #events h1 {
@@ -780,23 +879,27 @@ footer {
     .event_article {
         flex: 1 0 31%;
         height: auto;
+        width: 250px;
         margin: 5%;
         padding: 20px;
     }
 
     #news {
-        padding-top: 20px;
+        border-top: #FF3678 5px solid;
     }
 
     #news_wrapper {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
         flex-wrap: wrap;
     }
     
     .news_article {
         flex: 1 0 31%;
-        height: auto;
         margin: 5%;
+        padding: 20px;
+        width: 250px;
     }
 }
